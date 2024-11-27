@@ -1,42 +1,68 @@
+@import url('https://meyerweb.com/eric/tools/css/reset/reset.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
     --light:#ffffff;
     --dark:#685e54;
-    --main-color:#50ff67;
-    --secondary-color:#3cb64c;
-    --accent-color:#c18e5e;
+    --lgreen:#50ff67;
+    --dgreen:#3cb64c;
+    --brown:#c18e5e;
+}
+
+body {
+    background-color: var(--light);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 10px;
+    background-color: var(--dark);
+    justify-content: space-between;
+    align-items: center;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    a {
+        text-decoration: none;
+        margin: 0 10px;
+        padding: 5px;
+        color: var(--light);
+        font-family: Belleza, serif;
+        font-size: 1.2rem;
+    }
+    .logo {
+        height: 50px;
+    }
+}
+
+section {
+    padding: 50px;
+}
+section.bg-lightgreen {
+    background-color: var(--lgreen);
+}
+section.bg-darkgreen {
+    background-color: var(--dgreen);
+}
+section.bg-brown {
+    background-color: var(--brown);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Belleza, serif;
+    font-weight: bold;
+}
+h1 {
+    text-align: center;
+    font-size: 4rem;
 }
 
 p {
     font-family: Cardo, serif;
-}
-
-.logo1{
-    margin: 4px;
-    height: 75px;
-}
-
-a {
-    text-decoration: none;
-    margin: 0 10px;
-    padding: 5px;
-    color: var(--light);
-    font-family: Belleza, serif;
-    font-size: 1.2rem;
-}
-
-header {
-    background-color: var(--secondary-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav {
 }

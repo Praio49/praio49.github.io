@@ -3,20 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Anjou Pack'Eco</title>
-    <link href="style.css" rel="stylesheet" >
+    <link href="/assets/carton1.png" rel="icon">
+    <link href="/style.css" rel="stylesheet" >
+
+    <style>
+        #welcome {
+            text-align: center;
+            h1 {
+                color: var(--light);
+            }
+            p:first-child {
+                font: 1.5em Belleza;
+                font-weight: bold;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <header>
+<header>
+    <img src="/assets/logo3.png" alt="Logo" class="logo">
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="contact.html">Contact et achat</a>
+        <a href="organigramme.html">Qui sommes-nous ?</a>
+    </nav>
+</header>
 
-        <img src="assets/logo1.png" alt="Logo1" class="logo1">
+<main>
+    <section class="bg-darkgreen" id="welcome">
+        <p>Anjou Pack'Eco</p>
+        <h1>Bienvenue</h1>
 
-        <nav>
-            <a href="index.html"> Accueil  </a>
-            <a href="contact.html"> Contact et Commande  </a>
-            <a href="organigramme.html"> Qui sommes Nous ?  </a>
-        </nav>
-
-    </header>
-
+    </section>
+</main>
 </body>
 </html>
