@@ -66,3 +66,36 @@ h1 {
 p {
     font-family: Cardo, serif;
 }
+
+footer{
+    background-color: var(--dark);
+    padding: 15px;
+
+    a {
+        text-decoration: none;
+        color: var(--light);
+        font-family: Belleza, serif;
+        font-size: 1.2rem;
+    }
+
+    div {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    ul {
+        margin: 0 15px;
+    }
+
+    p {
+        text-align:center;
+        font-family: Cardo, serif;
+        color: var(--light);
+        font-size: 0.6rem;
+
+    }
+    .logo {
+        height: 50px;
+    }
+}
