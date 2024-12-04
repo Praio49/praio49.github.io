@@ -8,13 +8,19 @@
 
     <style>
         #welcome {
+            height: calc(100vh - 180px);
+            background-color: var(--green2);
             text-align: center;
             h1 {
-                color: var(--light);
+                color: var(--green3);
             }
             p:first-child {
+                color: var(--light);
                 font: 1.5em Belleza;
                 font-weight: bold;
+            }
+            .logo {
+                margin: 30px;
             }
         }
     </style>
@@ -31,13 +37,30 @@
 </header>
 
 <main>
-    <section class="bg-darkgreen" id="welcome">
+    <section id="welcome" class="">
         <p>Anjou Pack'Eco</p>
         <h1>Bienvenue</h1>
+        <img src="/assets/feuille2.png" alt="Anjou Pack'Eco" class="logo">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <section class="flex">
+            <img src="https://placehold.co/400x600" alt="?">
+            <img src="https://placehold.co/400x600" alt="?">
+        </section>
+    </section>
 
+    <section>
+        <h2>Nos produits</h2>
+<!--        <section class="flex">-->
+<!--            <img src="https://placehold.co/300" alt="?">-->
+<!--            <img src="https://placehold.co/300" alt="?">-->
+<!--        </section>-->
     </section>
 </main>
-
 
 <footer>
     <div>
@@ -59,9 +82,7 @@
             </li>
         </ul>
     </div>
-
-    <p class="copdat">Copyright © 2024 Thibaud COUDRIN & Noé LETEURTRE</p>
-
+    <p>Copyright © 2024 Thibaud COUDRIN & Noé LETEURTRE</p>
 </footer>
 </body>
 </html>

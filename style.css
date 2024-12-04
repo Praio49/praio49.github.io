@@ -4,11 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
 
 :root {
-    --light:#ffffff;
-    --dark:#685e54;
-    --lgreen:#50ff67;
-    --dgreen:#3cb64c;
-    --brown:#c18e5e;
+    --light: #ffffff;
+    --grey: #685e54;
+    --green1: #50ff67;
+    --green2: #3cb64c;
+    --green3: #253526;  /* added */
+    --brown: #c18e5e;
 }
 
 body {
@@ -19,8 +20,8 @@ header {
     position: sticky;
     top: 0;
     display: flex;
-    padding: 10px;
-    background-color: var(--dark);
+    padding: 15px;
+    background-color: var(--green3);
     justify-content: space-between;
     align-items: center;
     nav {
@@ -42,16 +43,26 @@ header {
 }
 
 section {
-    padding: 50px;
+    p {
+        padding: 0 12vw;
+    }
 }
-section.bg-lightgreen {
-    background-color: var(--lgreen);
+section:not(.flex) {
+    padding: 50px 12vw;
 }
-section.bg-darkgreen {
-    background-color: var(--dgreen);
+section.flex {
+    margin: 50px;
+    padding: 0;
+    background-color: #f0fa;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img {
+    }
 }
-section.bg-brown {
-    background-color: var(--brown);
+section.flex.col {
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -60,26 +71,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 4.5rem;
 }
 
-p {
+p, a {
     font-family: Cardo, serif;
+    font-size: 1.1rem;
 }
 
-footer{
-    background-color: var(--dark);
-    padding: 15px;
-
+footer {
+    background-color: var(--green3);
+    padding: 30px;
     a {
         text-decoration: none;
         color: var(--light);
-        font-family: Belleza, serif;
         font-size: 1.2rem;
     }
-
     div {
-        margin-bottom: 10px;
+        margin-bottom: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -87,15 +96,20 @@ footer{
     ul {
         margin: 0 15px;
     }
-
+    li {
+        margin: 8px 0;
+    }
     p {
         text-align:center;
-        font-family: Cardo, serif;
+        font-family: Belleza, serif;
         color: var(--light);
-        font-size: 0.6rem;
+        font-size: 0.9rem;
+    }
+    p:last-child {
+        color: var(--brown);
+    }
+}
 
-    }
-    .logo {
-        height: 50px;
-    }
+img.logo {
+    max-height: 80px;
 }
