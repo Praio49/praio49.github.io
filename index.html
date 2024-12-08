@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <title>Anjou Pack'Eco</title>
     <link href="/assets/carton1.png" rel="icon">
-    <link href="/style.css" rel="stylesheet" >
+    <link href="/css/style.css" rel="stylesheet" >
+    <link href="/css/carousel.css" rel="stylesheet">
+    <link href="/css/media-queries.css" rel="stylesheet">
 
     <style>
         #welcome {
-            height: calc(100vh - 180px);
             background-color: var(--green2);
             text-align: center;
-            h1 {
-                color: var(--green3);
-            }
             p:first-child {
                 color: var(--light);
                 font: 1.5em Belleza;
@@ -37,7 +35,7 @@
 </header>
 
 <main>
-    <section id="welcome" class="">
+    <section id="welcome" class="flex col">
         <p>Anjou Pack'Eco</p>
         <h1>Bienvenue</h1>
         <img src="/assets/feuille2.png" alt="Anjou Pack'Eco" class="logo">
@@ -47,42 +45,84 @@
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <section class="flex">
-            <img src="https://placehold.co/400x600" alt="?">
-            <img src="https://placehold.co/400x600" alt="?">
-        </section>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <button onclick="scrollToSection('products')">Scroll</button>
     </section>
 
-    <section>
+    <section id="products">
         <h2>Nos produits</h2>
-<!--        <section class="flex">-->
-<!--            <img src="https://placehold.co/300" alt="?">-->
-<!--            <img src="https://placehold.co/300" alt="?">-->
-<!--        </section>-->
+        <div class="carousel">
+            <button id="prev-btn" class="stripped">Préc.</button>
+            <div class="item-list">
+                <img class="carousel-item" alt="el0" src="https://placehold.co/300?text=0"/>
+                <img class="carousel-item" alt="el1" src="https://placehold.co/300?text=1"/>
+                <img class="carousel-item" alt="el2" src="https://placehold.co/300?text=2"/>
+                <img class="carousel-item" alt="el3" src="https://placehold.co/300?text=3"/>
+                <img class="carousel-item" alt="el4" src="https://placehold.co/300?text=4"/>
+                <img class="carousel-item" alt="el5" src="https://placehold.co/300?text=5"/>
+                <img class="carousel-item" alt="el6" src="https://placehold.co/300?text=6"/>
+                <img class="carousel-item" alt="el7" src="https://placehold.co/300?text=7"/>
+                <img class="carousel-item" alt="el8" src="https://placehold.co/300?text=8"/>
+                <img class="carousel-item" alt="el9" src="https://placehold.co/300?text=9"/>
+            </div>
+            <button id="next-btn" class="stripped">Suiv.</button>
+        </div>
     </section>
 </main>
 
-<footer>
+<footer id="footer">
     <div>
         <ul>
-            <li>
-                <a href="">Lien réseau 1</a>
-            </li>
-            <li>
-                <a href="">Lien réseau 2</a>
-            </li>
+            <li><a href="">Lien réseau 1</a></li>
+            <li><a href="">Lien réseau 2</a></li>
         </ul>
         <img src="/assets/carton1.png" alt="Logo" class="logo">
         <ul>
-            <li>
-                <a href="">Lien contact 1</a>
-            </li>
-            <li>
-                <a href="">Lien contact 2</a>
-            </li>
+            <li><a href="mailto:anjoupackeco@gmail.com">anjoupackeco@gmail.com</a></li>
+            <li>02 41 56 76 74</li>
+            <li>4 Boulevard de Lavoisier<br>49000 Angers</li>
         </ul>
     </div>
     <p>Copyright © 2024 Thibaud COUDRIN & Noé LETEURTRE</p>
 </footer>
+
+<script>
+    function scrollToSection(id) {
+        const element = document.getElementById(id);
+        let offset = element.getBoundingClientRect().top + window.scrollY - 58;
+        if (!lessThan800) {
+            offset -= 71;
+        }
+        window.scrollTo({top: offset, behavior: "smooth"});
+    }
+
+    function watchMediaChange(query) {
+        lessThan800 = !!query.matches;
+    }
+
+    let lastKnownScroll = 0;
+    let lessThan800 = false;
+    const queries = window.matchMedia("(max-width: 800px)");
+    const prev = document.getElementById('prev-btn')
+    const next = document.getElementById('next-btn')
+    const list = document.getElementsByClassName('item-list')[0]
+
+    prev.addEventListener('click', () => {list.scrollLeft -= list.offsetWidth - 100});  // TODO Fix: cannot go before 4th element
+    next.addEventListener('click', () => {list.scrollLeft += list.offsetWidth - 100});
+    queries.addEventListener("change", watchMediaChange);
+    document.addEventListener('scroll', () => {
+        if (window.scrollY > lastKnownScroll && window.scrollY > 130) {
+            document.getElementsByTagName('header')[0].classList.add('reduce');
+        } else {
+            document.getElementsByTagName('header')[0].classList.remove('reduce');
+        }
+        lastKnownScroll = window.scrollY;
+    });
+
+    watchMediaChange(queries);
+</script>
 </body>
 </html>

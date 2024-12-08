@@ -1,0 +1,28 @@
+.carousel {
+    display: flex;
+    background-color: aqua;
+    margin: 50px 0;
+    .item-list {
+        background-color: purple;
+        display: flex;
+        flex-direction: inherit;
+        justify-content: center;
+        align-items: center;
+        margin: 0 50px;
+        scroll-behavior: smooth;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+    }
+    .item-list::-webkit-scrollbar {  /* Chromium and Safari */
+        display: none;
+    }
+    .carousel-item {
+        background-color: crimson;
+        scroll-snap-align: center;
+        margin: 0 20px;
+        height: 40vh;
+        max-width: 300px;
+    }
+}

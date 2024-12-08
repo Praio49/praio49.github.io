@@ -1,0 +1,48 @@
+@media (max-width: 1200px) {
+    section p {
+        padding: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .carousel {
+        flex-direction: column;
+        button {
+            display: none
+        }
+        .item-list {
+            margin: 0;
+        }
+        .carousel-item {
+            margin: 10px 0;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        background-color: var(--green2)
+    }
+    section {
+        margin: 0;
+        min-height: calc(100vh - 215px);
+    }
+    header {
+        flex-direction: column;
+        justify-content: center;
+        nav {
+            margin-top: 15px;
+        }
+    }
+    header.reduce {
+        transform: translateY(-65px);
+    }
+    footer {
+        div {
+            flex-direction: column;
+        }
+        li {
+            text-align: center;
+        }
+    }
+}>
