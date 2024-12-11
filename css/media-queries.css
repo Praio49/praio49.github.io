@@ -1,6 +1,9 @@
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     section p {
         padding: 0;
+    }
+    .carousel-item {
+        height: 250px;
     }
 }
 
@@ -12,6 +15,7 @@
         }
         .item-list {
             margin: 0;
+            align-items: center;
         }
         .carousel-item {
             margin: 10px 0;

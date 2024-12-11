@@ -24,6 +24,7 @@ body {
 header {
     position: sticky;
     top: 0;
+    z-index: 1000;
     display: flex;
     padding: 15px;
     background-color: var(--green3);
@@ -36,6 +37,7 @@ header {
         align-items: center;
     }
     a {
+        text-align: center;
         text-decoration: none;
         margin: 0 10px;
         padding: 5px;
@@ -45,7 +47,6 @@ header {
     }
     a:hover {
         color: var(--green1);
-        font-weight: bold;
     }
     .logo {
         height: 50px;
@@ -138,6 +139,7 @@ button {
     cursor: pointer;
 }
 button.stripped {
+    aspect-ratio: 1;
     background-color: var(--green3);
     border: none;
     color: var(--light);
@@ -145,4 +147,7 @@ button.stripped {
     font-size: 1.2rem;
     padding: 10px 20px;
     transition: 0.3s;
+}
+button:hover {
+    transform: scale(1.1);
 }
