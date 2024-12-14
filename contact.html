@@ -19,7 +19,41 @@
 
 <body>
 <main>
-    <!-- code goes here -->
+    <li>
+        <ul>
+            <h3> Mail : anjoupackeco@gmail.com </h3>
+        </ul>
+        <ul>
+            <h3> Tel : 02 41 56 76 74 </h3>
+        </ul>
+        <ul>
+            <h3> 4 Boulevard Lavoisier 49000 Angers </h3>
+        </ul>
+    </li>
+    <form>
+        <h1> Bon de Commande </h1>
+        <fieldset>
+            <div>
+                <label for="name">Nom Entreprise </label>
+                <input type="text" id="name" required minlength="2" maxlength="50" size="20" />
+            </div>
+            <div>
+                <label for="name">Nom Dirigeant</label>
+                <input type="text" id="name" required minlength="2" maxlength="50" size="20" />
+            </div>
+            <div>
+                <label for="name">Domaine </label>
+                <input type="text" id="name" required minlength="2" maxlength="50" size="20" />
+            </div>
+            <div>
+                <label for="email">Mail</label>
+                <input type="email" id="email" pattern=".+@example\.com" size="20" required />
+
+                <label for="phone">Tel</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" size="20" required />
+            </div>
+        </fieldset>
+    </form>
 </main>
 
 <footer id="footer">
