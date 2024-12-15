@@ -1,6 +1,4 @@
 form {
-    margin: 50px 0;
-    background-color: var(--green2);
     div {
         display: flex;
         justify-content: center;
@@ -12,25 +10,53 @@ form {
         display: block;
         margin-left: 5px;
         font-family: Cardo, serif;
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
+}
 
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px 0;
+    background-color: var(--green2);
+    div.controls {
+        margin-bottom: 0;
+        button {
+            margin: 0 20px;
+        }
+    }
+}
 
-    table, th, td {
-        font-family: Cardo, serif;
-        padding: 20px;
-    }
-    th{
-        color: var(--light);
-        background-color: var(--green3);
-    }
-    td{
-        color: var(--dark);
-        background-color: var(--brown1);
-    }
-    table{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+textarea {
+    padding: 3px 5px;
+    margin: 5px 15px;
+    border: 1px solid var(--green3);
+    font-family: Cardo, serif;
+    font-size: 1rem;
+}
+input[type="text"]:not(:focus):hover,
+input[type="number"]:not(:focus):hover,
+input[type="tel"]:not(:focus):hover,
+input[type="email"]:not(:focus):hover,
+input[type="password"]:not(:focus):hover,
+textarea:not(:focus):hover {
+    color: var(--green3);
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border: 1px solid var(--green2);
+}
+
+td input {
+    margin: 0;
 }

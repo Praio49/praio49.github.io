@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Nous contacter</title>
-    <link href="/assets/carton1.png" rel="icon">
+    <link href="/images/carton1.png" rel="icon">
     <link href="/css/style.css" rel="stylesheet" >
     <link href="/css/media-queries.css" rel="stylesheet">
     <link href="/css/form.css" rel="stylesheet">
 
     <style>
-        section {
-            ul {
-                display: flex;
-                justify-content: space-evenly;
-            }
+        section ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #order {
+            background-color: var(--green1);
         }
     </style>
 </head>
 
 <header>
-    <img src="/assets/logo3.png" alt="Logo" class="logo">
+    <img src="images/logo3.png" alt="Logo" class="logo">
     <nav>
         <a href="/index.html">Accueil</a>
         <a href="/products.html">Produits</a>
@@ -30,10 +31,10 @@
 
 <body>
 <main>
-    <section class="bon_com">
+    <section id="order">
         <h1>Bon de Commande</h1>
-        <fieldset form="form1" id="part1">
-            <form id="form1">
+        <form id="form">
+            <fieldset form="form" id="basic-info">
                 <div>
                     <label for="company">Nom Entreprise </label>
                     <input type="text" id="company" name="company" required minlength="2" maxlength="50" size="20" />
@@ -43,7 +44,7 @@
                 <div>
                     <label for="field">Domaine </label>
                     <input type="text" id="field" name="field" required minlength="2" size="20" />
-                    <!-- A dropdown with an "other" option would be better-suited, right ? -->
+                    <!-- A dropdown with an "other" option would be better-suited, right ? --> <!-- Or maybe not, idk :shrug: -->
                 </div>
                 <div>
                     <label for="email">Mail</label>
@@ -52,179 +53,247 @@
                     <label for="phone">Tel</label>
                     <input type="tel" id="phone" name="phone" size="10" required />
                 </div>
+                <div class="controls">
+                    <button>Suivant ></button>
+                </div>
+            </fieldset>
+
+            <fieldset form="form" id="products">
                 <table>
                     <tr>
-                        <th> REF </th>
-                        <th> Produit </th>
-                        <th> Dimensions </th>
-                        <th> Prix HT</th>
-                        <th> Nombre </th>
-                        <th> Ajouter à la commande </th>
+                        <th>Réf.</th>
+                        <th>Produit</th>
+                        <th>Dimensions</th>
+                        <th>Prix HT (€)</th>
+                        <th>Qté.</th>
+                        <th>Commande</th>
                     </tr>
-
                     <tr>
                         <td>110</td>
                         <td>Carton Simple cannelure</td>
-                        <td>30x15x15</td>
-                        <td>1.15€</td>
+                        <td>30 x 15 x 15</td>  <!-- unités ? -->
+                        <td>1,15</td>
                         <td>1</td>
-                        <td><input type="number" id="prod1" name="prod1" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod110"></label>
+                            <input type="number" id="prod110" name="prod110" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>111</td>
                         <td>Carton Simple cannelure</td>
-                        <td>45x30x30 </td>
-                        <td>3.00€</td>
+                        <td>45 x 30 x 30</td>  <!-- unités ? -->
+                        <td>3,00</td>
                         <td>1</td>
-                        <td><input type="number" id="prod2" name="prod2" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod111"></label>
+                            <input type="number" id="prod111" name="prod111" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>112</td>
-                        <td>Carton simple cannelure
-                            hauteur variable
-                        </td>
-                        <td>60x40x35-50</td>
-                        <td>23.84€</td>
+                        <td>Carton simple cannelure<br>(Hauteur variable)</td>
+                        <td>60 x 40 x 35-50</td>  <!-- unités ? -->
+                        <td>23,84</td>
                         <td>1</td>
-                        <td><input type="number" id="prod3" name="prod3" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod112"></label>
+                            <input type="number" id="prod112" name="prod112" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>113</td>
-                        <td>
-                             Carton double cannelure
-                            hauteur variable
-                        </td>
-                        <td>60x40x71-90</td>
-                        <td>23.64€</td>
+                        <td>Carton double cannelure<br>(Hauteur variable)</td>
+                        <td>60 x 40 x 71-90</td>  <!-- unités ? -->
+                        <td>23,64</td>
                         <td>1</td>
-                        <td><input type="number" id="prod4" name="prod4" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod113"></label>
+                            <input type="number" id="prod113" name="prod113" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>210</td>
                         <td>Sac en papier</td>
-                        <td>22x10x28 </td>
-                        <td>48.78€</td>
+                        <td>22 x 10 x 28</td>  <!-- unités ? -->
+                        <td>48,78</td>
                         <td>250</td>
-                        <td><input type="number" id="prod5" name="prod5" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod210"></label>
+                            <input type="number" id="prod210" name="prod210" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>211</td>
                         <td>Sac en papier</td>
-                        <td>32x22x28</td>
-                        <td>63,84€</td>
+                        <td>32 x 22 x 28</td>  <!-- unités ? -->
+                        <td>63,84</td>
                         <td>250</td>
-                        <td><input type="number" id="prod6" name="prod6" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod211"></label>
+                            <input type="number" id="prod211" name="prod211" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>310</td>
                         <td>Sachet en papier kraft</td>
-                        <td>10x20x6</td>
-                        <td>33.70€</td>
+                        <td>10 x 20 x 6</td>  <!-- unités ? -->
+                        <td>33,70</td>
                         <td>200</td>
-                        <td><input type="number" id="prod7" name="prod7" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod310"></label>
+                            <input type="number" id="prod310" name="prod310" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>311</td>
                         <td>Sachet en papier kraft</td>
-                        <td>15x26x9</td>
-                        <td>42.75€</td>
+                        <td>15 x 26 x 9</td>  <!-- unités ? -->
+                        <td>42,75</td>
                         <td>200</td>
-                        <td><input type="number" id="prod8" name="prod8" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod311"></label>
+                            <input type="number" id="prod311" name="prod311" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>312</td>
                         <td>Sachet en papier kraft</td>
-                        <td>20x29x10</td>
-                        <td>55.40€</td>
+                        <td>20 x 29 x 10</td>  <!-- unités ? -->
+                        <td>55,40</td>
                         <td>200</td>
-                        <td><input type="number" id="prod9" name="prod9" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod312"></label>
+                            <input type="number" id="prod312" name="prod312" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>313</td>
                         <td>Sachet en papier kraft</td>
-                        <td>22x40x16</td>
-                        <td>78.20€</td>
+                        <td>22 x 40 x 16</td>  <!-- unités ? -->
+                        <td>78,20</td>
                         <td>200</td>
-                        <td><input type="number" id="prod10" name="prod10" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod313"></label>
+                            <input type="number" id="prod313" name="prod313" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>410</td>
                         <td>Rouleau papier kraft</td>
-                        V<td>50cmx100m</td>
-                        <td>61.90€</td>
+                        <td>50 cm x 100 m</td>
+                        <td>61,90</td>
                         <td>1</td>
-                        <td><input type="number" id="prod11" name="prod11" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod410"></label>
+                            <input type="number" id="prod410" name="prod410" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>411</td>
                         <td>Rouleau papier  kraft</td>
-                        <td>50cmx250m</td>
-                        <td>154.75€</td>
+                        <td>50 cm x 250 m</td>
+                        <td>154,75</td>
                         <td>1</td>
-                        <td><input type="number" id="prod12" name="prod12" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod411"></label>
+                            <input type="number" id="prod411" name="prod411" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>412</td>
                         <td>Rouleau papier  kraft</td>
-                        <td>100cmx100m</td>
-                        <td>123.80€</td>
+                        <td>100 cm x 100 m</td>
+                        <td>123,80</td>
                         <td>1</td>
-                        <td><input type="number" id="prod13" name="prod13" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod412"></label>
+                            <input type="number" id="prod412" name="prod412" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>413</td>
                         <td>Rouleau papier  kraft</td>
-                        <td>100cmx250m</td>
-                        <td>309.49€</td>
+                        <td>100 cm x 250 m</td>
+                        <td>309,49</td>
                         <td>1</td>
-                        <td><input type="number" id="prod14" name="prod14" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod413"></label>
+                            <input type="number" id="prod413" name="prod413" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>420</td>
                         <td>Dérouleur</td>
-                        <td>53,3x31,2x28,3cm</td>
-                        <td>139.90€</td>
+                        <td>53,3 x 31,2 x 28,3 cm</td>
+                        <td>139,90</td>
                         <td>1</td>
-                        <td><input type="number" id="prod15" name="prod15" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod420"></label>
+                            <input type="number" id="prod420" name="prod420" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>421</td>
                         <td>Dérouleur</td>
-                        <td>103,3x31,2x28,3cm</td>
-                        <td>149.90€</td>
+                        <td>103,3 x 31,2 x 28,3 cm</td>
+                        <td>149,90</td>
                         <td>1</td>
-                        <td><input type="number" id="prod16" name="prod16" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod421"></label>
+                            <input type="number" id="prod421" name="prod421" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>510</td>
                         <td>Ruban adhésif Sans impression</td>
-                        <td>5cmx50m</td>
-                        <td>3.20€</td>
+                        <td>5 cm x 50 m</td>
+                        <td>3,20</td>
                         <td>20</td>
-                        <td><input type="number" id="prod17" name="prod17" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod510"></label>
+                            <input type="number" id="prod510" name="prod510" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>511</td>
                         <td>Ruban adhésif Imprimé “Fragile”</td>
-                        <td>5cmx50m</td>
-                        <td>5.70€</td>
+                        <td>5 cm x 50 m</td>
+                        <td>570,00</td>
                         <td>20</td>
-                        <td><input type="number" id="prod18" name="prod18" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod511"></label>
+                            <input type="number" id="prod511" name="prod511" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>610</td>
                         <td>Papier de soie</td>
-                        <td>50x75</td>
-                        <td>9.92€</td>
+                        <td>50 x 75</td>  <!-- unités ? -->
+                        <td>9,92</td>
                         <td>200</td>
-                        <td><input type="number" id="prod19" name="prod19" min="0" max="100"/></td>
+                        <td>
+                            <label for="prod610"></label>
+                            <input type="number" id="prod610" name="prod610" min="0" max="100" value="0"/>
+                        </td>
                     </tr>
-
                 </table>
-                <button type="submit" form="form1" value="Submit">Valider</button>
-                <button type="reset" form="form1" value="Reset">Annuler</button>
-            </form>
-        </fieldset>
+                <div class="controls">
+                    <button>< Précédent</button>
+                    <button>Suivant ></button>
+                </div>
+            </fieldset>
+
+            <fieldset form="form" id="delivery">
+                <h2>Résumé de la commande</h2>
+                <p>*Code goes here*</p>
+                <div class="controls">
+                    <button>< Précédent</button>
+                    <button type="submit" form="form" value="Submit">Valider</button>
+                </div>
+            </fieldset>
+        </form>
+
         <ul class="ul_contact">
             <li><a href="mailto:anjoupackeco@gmail.com" class="no-deco">anjoupackeco@gmail.com</a></li>
             <li>02 41 56 76 74</li>
@@ -239,7 +308,7 @@
             <li><a href="">Lien réseau 1</a></li>
             <li><a href="">Lien réseau 2</a></li>
         </ul>
-        <img src="/assets/carton1.png" alt="Logo" class="logo">
+        <img src="/images/carton1.png" alt="Logo" class="logo">
         <ul>
             <li><a href="mailto:anjoupackeco@gmail.com">anjoupackeco@gmail.com</a></li>
             <li>02 41 56 76 74</li>

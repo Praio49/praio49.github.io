@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
 
+
 :root {
     --light: #ffffff;
     --gray: #b3afa0;  /* added */
@@ -21,6 +22,7 @@
 body {
     background-color: var(--light);
 }
+
 
 header {
     position: sticky;
@@ -92,6 +94,7 @@ footer {
     }
 }
 
+
 section {
     margin: 50px;
     padding: 50px;
@@ -107,6 +110,28 @@ section.flex {
 section.flex:has(article) {
     flex-direction: row;
     justify-content: space-around;
+}
+
+table {
+    font-family: Cardo, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+th {
+    color: var(--light);
+    background-color: var(--green3);
+}
+tr {
+    color: var(--dark);
+    background-color: var(--light);
+}
+tr:nth-child(odd) {
+    background-color: var(--gray);
+}
+th, td {
+    padding: 20px;
+    vertical-align: center;
 }
 
 
@@ -130,9 +155,7 @@ section.flex:has(article) {
     }
 }
 
-.bon_com{
-    background-color: var(--green1);
-}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: Belleza, serif;
     font-weight: bold;
@@ -163,14 +186,15 @@ a {
     font: inherit;
     color: inherit;
 }
-
 a.no-deco {
     text-decoration: none;
 }
 
+
 img.logo {
     max-height: 100px;
 }
+
 
 button {
     padding: 10px 20px;
@@ -191,26 +215,11 @@ button {
 button.squared {
     aspect-ratio: 1;
 }
-
 button:hover {
-    background-color: var(--gray);
+    background-color: var(--light);
+    color: var(--green3);
 }
-
-table, th, td {
-    font-family: Cardo, serif;
-    padding: 20px;
+button:not(.squared):hover {
+    padding: 10px 30px;
+    font-weight: bold;
 }
-th{
-    color: var(--light);
-    background-color: var(--green3);
-}
-td{
-    color: var(--dark);
-    background-color: var(--brown1);
-}
-table{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
