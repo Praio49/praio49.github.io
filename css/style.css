@@ -181,6 +181,13 @@ button {
     background-color: var(--green3);
     cursor: pointer;
 }
+.button_products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
 button.squared {
     aspect-ratio: 1;
 }
