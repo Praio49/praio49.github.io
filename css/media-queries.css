@@ -1,12 +1,3 @@
-@media (max-width: 1300px) {
-    section p {
-        padding: 0;
-    }
-    .carousel-item {
-        height: 250px;
-    }
-}
-
 @media (max-width: 1000px) {
     .carousel {
         flex-direction: column;
@@ -19,6 +10,7 @@
         }
         .carousel-item {
             margin: 10px 0;
+            height: 250px;
         }
     }
 }
@@ -30,6 +22,9 @@
     section {
         margin: 0;
         min-height: calc(100vh - 215px);
+    }
+    section#welcome {
+        padding: 50px;
     }
     header {
         flex-direction: column;
@@ -49,4 +44,4 @@
             text-align: center;
         }
     }
-}>
+}

@@ -10,8 +10,14 @@
 
     <style>
         #welcome {
+            padding-right: 35%;
             background-color: var(--green2);
-            text-align: center;
+            justify-content: end;
+            align-items: start;
+            h1 {
+                text-align: left;
+                margin-bottom: 40px;
+            }
             p:first-child {
                 color: var(--light);
                 font: 1.5em Belleza;
@@ -39,20 +45,23 @@
     <section id="welcome" class="flex col">
         <p>Anjou Pack'Eco</p>
         <h1>Emballez avec fierté</h1>
-        <img src="/assets/feuille2.png" alt="Anjou Pack'Eco" class="logo">
+<!--        <img src="/assets/feuille2.png" alt="Anjou Pack'Eco" class="logo">-->
+        <p><i>
+            Anjou Pack'Eco s'est spécialisé dans la vente d'emballages écologiques aux entreprises, proclamant haut et
+            fort son engagement envers l'environnement. Notre objectif est de soulager notre planète à l'aide de
+            produits de qualité recyclés et biodégradables.
+        </i></p>
         <p>
-            Anjou Pack'eco s'est sépcialisé dans la vente pour les entreprises dont l'activité nécessite
-            de continuer des activités de ventes avec des emballages, le tout en gardant une approche écologique
-            dans le but de soulager notre planète grâce à des produits de qualité qui sont recyclés et biodégradables.
-        </p>
-        <p>
-            L'amélioration des produits n'est pas notre seul objectif, en effet on pourrait qualifier Anjou Pack ECO
-            D'entreprise 100 % Angevine, car notre but est aussi de participer l'économie local grâce à un réseau
+            Cependant, nous souhaitons inclure à ce nouveau standard de qualité un aspect local. Anjou Pack'Eco est une
+            entreprise 100 % Angevine, nous permettant ainsi de participer à l'économie locale grâce à un réseau
             basé uniquement en Anjou.
         </p>
-        <button onclick="scrollToSection('products')">Nos produits</button>
+<!--        <button onclick="scrollToSection('products')">Nos produits</button>-->
+    </section>
+
+    <section>
         <p>
-            Nous avons aussi pour but que les entreprises qui nous contatc puisse se faire accompagnée sur leurs
+            Nous avons aussi pour but que les entreprises qui nous contactent puisse se faire accompagner sur leurs
             commandes. (à améliorer)
         </p>
         <button onclick="window.location.href = '/contact.html';">Nous contacter</button>
@@ -61,7 +70,7 @@
     <section id="products">
         <h2>Nos produits</h2>
         <div class="carousel">
-            <button id="prev-btn" class="stripped">Préc.</button>
+            <button id="prev-btn" class="squared">Préc.</button>
             <div class="item-list">
                 <img class="carousel-item" alt="el0" src="https://placehold.co/300?text=0"/>
                 <img class="carousel-item" alt="el1" src="https://placehold.co/300?text=1"/>
@@ -74,8 +83,9 @@
                 <img class="carousel-item" alt="el8" src="https://placehold.co/300?text=8"/>
                 <img class="carousel-item" alt="el9" src="https://placehold.co/300?text=9"/>
             </div>
-            <button id="next-btn" class="stripped">Suiv.</button>
+            <button id="next-btn" class="squared">Suiv.</button>
         </div>
+        <a href="/products.html">Voir la gamme complète</a>
     </section>
 </main>
 
