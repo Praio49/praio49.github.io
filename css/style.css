@@ -108,7 +108,9 @@ section.flex:has(article) {
     flex-direction: row;
     justify-content: space-around;
 }
-
+.bon_com{
+    background-color: var(--green1);
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: Belleza, serif;
     font-weight: bold;

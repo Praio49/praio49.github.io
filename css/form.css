@@ -12,5 +12,24 @@ form {
         display: block;
         margin-left: 5px;
         font-family: Cardo, serif;
+        font-size: 1.4rem;
+    }
+
+
+    table, th, td {
+        color: var(--light);
+        font-family: Cardo, serif;
+        padding: 20px;
+    }
+    th{
+        background-color: var(--green3);
+    }
+    td{
+        background-color: var(--brown1);
+    }
+    table{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
