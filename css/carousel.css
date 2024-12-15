@@ -18,7 +18,7 @@
         display: none;
     }
     .carousel-item {
-        background-color: var(--green1);
+        background-color: var(--green2);
         scroll-snap-align: center;
         padding: 10px;
         margin: 0 20px;
