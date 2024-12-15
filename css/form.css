@@ -17,14 +17,15 @@ form {
 
 
     table, th, td {
-        color: var(--light);
         font-family: Cardo, serif;
         padding: 20px;
     }
     th{
+        color: var(--light);
         background-color: var(--green3);
     }
     td{
+        color: var(--dark);
         background-color: var(--brown1);
     }
     table{
