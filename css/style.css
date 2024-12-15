@@ -108,6 +108,28 @@ section.flex:has(article) {
     flex-direction: row;
     justify-content: space-around;
 }
+
+
+.sec_products{
+    background-color: var(--green2);
+    article{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    img {
+        margin: 10px;
+        height: 10em;
+    }
+    ul{
+        margin-left: 20px;
+        p{
+            font-size: 1.4rem;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+}
+
 .bon_com{
     background-color: var(--green1);
 }
@@ -162,6 +184,26 @@ button {
 button.squared {
     aspect-ratio: 1;
 }
+
 button:hover {
     background-color: var(--gray);
 }
+
+table, th, td {
+    font-family: Cardo, serif;
+    padding: 20px;
+}
+th{
+    color: var(--light);
+    background-color: var(--green3);
+}
+td{
+    color: var(--dark);
+    background-color: var(--brown1);
+}
+table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
