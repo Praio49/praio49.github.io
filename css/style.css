@@ -223,3 +223,12 @@ button:not(.squared):hover {
     padding: 10px 30px;
     font-weight: bold;
 }
+.organigramme{
+    margin: 15px;
+    max-width: 100%;
+}
+.div_orga{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
