@@ -26,6 +26,12 @@
     section#welcome {
         padding: 50px;
     }
+    section#order ul {
+        flex-direction: column;
+        li {
+            margin: 10px 0;
+        }
+    }
     header {
         flex-direction: column;
         justify-content: center;

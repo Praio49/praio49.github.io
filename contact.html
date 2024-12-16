@@ -9,12 +9,15 @@
     <link href="/css/form.css" rel="stylesheet">
 
     <style>
-        section ul {
-            display: flex;
-            justify-content: space-evenly;
-        }
         #order {
-            background-color: var(--green1);
+            background-color: var(--green2);
+            ul {
+                display: flex;
+                justify-content: space-around;
+                padding-top: 20px;
+                margin-top: 25px;
+                border-top: 1px solid var(--dark);
+            }
         }
     </style>
 </head>
@@ -32,7 +35,7 @@
 <body>
 <main>
     <section id="order">
-        <h1>Bon de Commande</h1>
+        <h1>Bon de commande</h1>
         <form id="form">
             <fieldset form="form" id="basic-info">
                 <div>
@@ -57,11 +60,11 @@
                     <input type="tel" id="phone" name="phone" size="30" required />
                 </div>
                 <div class="controls">
-                    <button>Suivant ></button>
+                    <a class="btn-like" id="start-next">Suivant ></a>
                 </div>
             </fieldset>
 
-            <fieldset form="form" id="products">
+            <fieldset form="form" id="products" style="display: none">
                 <table>
                     <tr>
                         <th>Réf.</th>
@@ -282,30 +285,33 @@
                     </tr>
                 </table>
                 <div class="controls">
-                    <button>< Précédent</button>
-                    <button>Suivant ></button>
+                    <a class="btn-like" id="products-prev">< Précédent</a>
+                    <a class="btn-like" id="products-next">Suivant ></a>
                 </div>
             </fieldset>
 
-            <fieldset form="form" id="delivery">
-                <h2>Résumé de la commande</h2>
+            <fieldset form="form" id="delivery" style="display: none">
+                <h3>Résumé de la commande</h3>
                 <p>*Code goes here*</p>
                 <div class="controls">
-                    <button>< Précédent</button>
+                    <a class="btn-like" id="delivery-prev">< Précédent</a>
                     <button type="submit" form="form" value="Submit">Valider</button>
                 </div>
             </fieldset>
         </form>
 
-        <ul class="ul_contact">
-            <li><a href="mailto:anjoupackeco@gmail.com" class="no-deco">anjoupackeco@gmail.com</a></li>
-            <li>02 41 56 76 74</li>
-            <li>4 Boulevard de Lavoisier, 49000 Angers</li>
-        </ul>
+        <div>
+            <h3>Pour nous contacter</h3>
+            <ul>
+                <li><a href="mailto:anjoupackeco@gmail.com" class="no-deco">anjoupackeco@gmail.com</a></li>
+                <li>02 41 56 76 74</li>
+                <li>4 Boulevard de Lavoisier, 49000 Angers</li>
+            </ul>
+        </div>
     </section>
 </main>
 
-<footer id="footer">
+<footer>
     <div>
         <ul>
             <li><a href="">Lien réseau 1</a></li>
@@ -322,5 +328,41 @@
 </footer>
 
 <script src="/js/codebase.js"></script>
+<script>
+    const form = document.getElementById('form');
+    const basicInfo = document.getElementById('basic-info');
+    const products = document.getElementById('products');
+    const delivery = document.getElementById('delivery');
+    const startNext = document.getElementById('start-next');
+    const productsNext = document.getElementById('products-next');
+    const productsPrev = document.getElementById('products-prev');
+    const deliveryPrev = document.getElementById('delivery-prev');
+
+    startNext.addEventListener('click', () => {
+        basicInfo.style.display = 'none';
+        products.style.display = 'block';
+        scrollToSection('order');
+    });
+    productsPrev.addEventListener('click', () => {
+        basicInfo.style.display = 'block';
+        products.style.display = 'none';
+        scrollToSection('order');
+    });
+    productsNext.addEventListener('click', () => {
+        products.style.display = 'none';
+        delivery.style.display = 'block';
+        scrollToSection('order');
+    });
+    deliveryPrev.addEventListener('click', () => {
+        products.style.display = 'block';
+        delivery.style.display = 'none';
+        scrollToSection('order');
+    });
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        products.style.display = 'none';
+        delivery.style.display = 'block';
+    });
+</script>
 </body>
 </html>

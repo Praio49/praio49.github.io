@@ -137,6 +137,7 @@ th, td {
     vertical-align: center;
 }
 
+
 h1, h2, h3, h4, h5, h6 {
     font-family: Belleza, serif;
     font-weight: bold;
@@ -167,7 +168,7 @@ a {
     font: inherit;
     color: inherit;
 }
-a.no-deco {
+a.no-deco, a.btn-like {
     text-decoration: none;
 }
 
@@ -177,7 +178,7 @@ img.logo {
 }
 
 
-button {
+button, a.btn-like {
     padding: 10px 20px;
     border: 1px solid var(--green3);
     font-family: Belleza, serif;
@@ -196,19 +197,19 @@ button {
 button.squared {
     aspect-ratio: 1;
 }
-button:hover {
+button:hover, a.btn-like:hover {
     background-color: var(--light);
     color: var(--green3);
 }
-button:not(.squared):hover {
+button:not(.squared):hover, a.btn-like:hover {
     padding: 10px 30px;
     font-weight: bold;
 }
-.organigramme{
+.organigramme {
     margin: 15px;
     max-width: 100%;
 }
-.div_orga{
+.div_orga {
     display: flex;
     justify-content: center;
     align-items: center;
