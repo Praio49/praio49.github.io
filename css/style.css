@@ -21,6 +21,8 @@
 
 body {
     background-color: var(--light);
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -133,10 +135,6 @@ tr:nth-child(odd) {
 th, td {
     padding: 20px;
     vertical-align: center;
-}
-
-.sec_carousel{
-    background-color: var(--brown1);
 }
 
 h1, h2, h3, h4, h5, h6 {
