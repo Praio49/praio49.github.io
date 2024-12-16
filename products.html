@@ -6,7 +6,31 @@
     <link href="/images/carton1.png" rel="icon">
     <link href="/css/style.css" rel="stylesheet" >
     <link href="/css/media-queries.css" rel="stylesheet">
+
+    <style>
+        section {
+            background-color: var(--green2);
+            min-height: 0;
+            article{
+                display: flex;
+                justify-content: space-evenly;
+            }
+            img {
+                margin: 10px;
+                height: 10em;
+            }
+            ul {
+                margin-left: 20px;
+                li {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    </style>
 </head>
+
+<body>
 <header>
     <img src="/images/logo3.png" alt="Logo" class="logo">
     <nav>
@@ -17,9 +41,8 @@
     </nav>
 </header>
 
-<body>
 <main>
-    <section class="sec_products">
+    <section id="prod11">
     <h2>Cartons</h2>
         <article>
             <div>
@@ -27,9 +50,9 @@
                 <img src="/images/carton_img_2.png" alt="Carton ouvert">
             </div>
             <ul>
-                <p>Carton brun recyclé.</p>
-                <p>Optimaux pour les marchandises légères ou lourdes.</p>
-                <p>Ce carton est l’emballage protecteur optimal.</p>
+                <li>Carton brun recyclé</li>
+                <li>Optimaux pour les marchandises légères ou lourdes</li>
+                <li>Ce carton est l’emballage protecteur optimal</li>
             </ul>
         </article>
         <table>
@@ -66,8 +89,8 @@
         </table>
     </section>
 
-    <h2> Sac papiers </h2>
-    <section class="sec_products">
+    <section id="prod21">
+        <h2>Sac en papier</h2>
         <article>
             <div>
                 <img src="/images/sac_papier_1.png" alt="Sac en papier kraft">
@@ -76,7 +99,7 @@
             <ul>
                 <p>Sac en papier avec poignées plates et feuille de renfort</p>
                 <p>Résistant, stable et capacité de charge très élevée</p>
-                <p>Disponibles en différentes tailles, ils tiennent <br>fermement sur le sol une fois dépliés.</p>
+                <p>Disponibles en différentes tailles, ils tiennent fermement sur le sol une fois dépliés.</p>
                 <p>Nos sacs en papier sont écologiques et biodégradables</p>
             </ul>
         </article>
@@ -102,8 +125,8 @@
         </table>
     </section>
 
-    <h2> Sachet papier kraft </h2>
-    <section class="sec_products">
+    <section id="prod31">
+        <h2>Sachet papier kraft</h2>
         <article>
             <div>
                 <img src="/images/sachet_kraft_1.png" alt="Sachets kraft">
@@ -156,7 +179,7 @@
     </section>
 
     <h2> Rouleau papier kraft nid d'abeille </h2>
-    <section class="sec_products">
+    <section>
         <article>
             <div>
                 <img src="/images/papier_kraft.png" alt="Carton_fermé">
@@ -219,14 +242,14 @@
     </section>
 
     <h2> Ruban adhésif en papier kraft</h2>
-    <section class="sec_products">
+    <section>
         <article>
             <div>
                 <img src="/images/ruban_adhesif_1.png" alt="ruban_adhésif">
                 <img src="/images/ruban_adhesif_2.png" alt="ruban_adhésif">
             </div>
             <ul>
-                <p>  Solution écologique à la fermeture des caisses et des cartons</p>
+                <p>Solution écologique à la fermeture des caisses et des cartons</p>
                 <p>66% de matières recyclées</p>
                 <p>Se découpe facilement à la main</p>
                 <p>Bonne résistance aux chocs et excellente adhésion</p>
@@ -264,12 +287,12 @@
                 <img src="/images/papier_de_soie_2.png" alt="ruban_adhésif">
             </div>
             <ul>
-                <p> Pour emballer vos articles avec soin</p>
-                <p>Farbiqué en papier sans acide</p>
-                <p>Recyclable, compostable et biodégradable</p>
-                <p>Met en valeur les produits</p>
-                <p>Idéal pour les cadeaux</p>
-                <p>Permet des caler des objets fragiles dans des cartons</p>
+                <li> Pour emballer vos articles avec soin</li>
+                <li>Farbiqué en papier sans acide</li>
+                <li>Recyclable, compostable et biodégradable</li>
+                <li>Met en valeur les produits</li>
+                <li>Idéal pour les cadeaux</li>
+                <li>Permet des caler des objets fragiles dans des cartons</li>
             </ul>
         </article>
         <table>
@@ -293,7 +316,7 @@
     </div>
 </main>
 
-<footer id="footer">
+<footer>
     <div>
         <ul>
             <li><a href="">Lien réseau 1</a></li>

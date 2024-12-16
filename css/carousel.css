@@ -1,10 +1,8 @@
 .carousel {
     display: flex;
     align-items: center;
-    /*background-color: aqua;*/
     margin: 50px 0;
     .item-list {
-        /*background-color: purple;*/
         display: flex;
         flex-direction: inherit;
         margin: 0 50px;

@@ -79,6 +79,7 @@ footer {
     }
     li {
         margin: 10px 0;
+        color: var(--light);
         a {
             text-decoration: none;
         }
@@ -134,27 +135,6 @@ th, td {
     vertical-align: center;
 }
 
-
-.sec_products{
-    background-color: var(--green2);
-    article{
-        display: flex;
-        justify-content: space-evenly;
-    }
-    img {
-        margin: 10px;
-        height: 10em;
-    }
-    ul{
-        margin-left: 20px;
-        p{
-            font-size: 1.4rem;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-    }
-}
-
 .sec_carousel{
     background-color: var(--brown1);
 }
@@ -177,7 +157,7 @@ h3 {
     font-size: 2rem;
 }
 
-p {
+p, li, td {
     font-family: Cardo, serif;
     font-size: 1.1rem;
     color: var(--dark);
