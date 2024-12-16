@@ -10,7 +10,13 @@ form {
         display: block;
         margin-left: 5px;
         font-family: Cardo, serif;
-        font-size: 1rem;
+        font-size: 1.1rem;
+    }
+    label {
+        display: block;
+        width: 150px;
+        float: left;
+        text-align: right;
     }
 }
 
