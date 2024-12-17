@@ -1,7 +1,9 @@
-@media (min-width: 1400px) {
-    section.flex:has(article) {
-        flex-direction: row;
-        justify-content: space-around;
+@media (max-width: 1300px) {
+    section article {
+        flex-direction: column;
+        div img {
+            margin: 0;
+        }
     }
 }
 
@@ -28,9 +30,6 @@
     }
     section {
         margin: 0;
-        article {
-            flex-direction: row;
-        }
     }
     section#welcome div {
         margin: 0;
