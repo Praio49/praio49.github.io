@@ -136,6 +136,12 @@ th, td {
     vertical-align: center;
 }
 
+div.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Belleza, serif;
@@ -196,11 +202,6 @@ button:hover, a.btn-like:hover {
 button:not(.squared):hover, a.btn-like:hover {
     padding: 10px 30px;
     font-weight: bold;
-}
-.boutton_center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .organigramme {
     margin: 15px;
