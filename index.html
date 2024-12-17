@@ -11,7 +11,7 @@
     <style>
         #welcome {
             padding: 0;
-            background: url("/images/img_accueil.jpg") no-repeat center;
+            background: url("/images/img_accueil.jpeg") no-repeat center;
             background-size: cover;
             justify-content: end;
             align-items: start;
@@ -40,6 +40,17 @@
             .logo {
                 margin: 30px;
             }
+        }
+        #desc{
+            background-color: var(--green2);
+        }
+        #products {
+            background-color: var(--light);
+        }
+        #gamme {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -81,7 +92,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="desc">
         <h2>Une entreprise proche de vous</h2>
         <p>
             Anjou Pack'Eco à également pour but que les entreprises qui nous contactant puissent se faire accompagnées sur leurs
@@ -99,7 +110,7 @@
         <button onclick="window.location.href = '/contact.html';">Nous contacter</button>
     </section>
 
-    <section id="products">
+    <section id="products" class="no_min">
         <h2>Nos produits</h2>
         <div class="carousel">
             <button id="prev-btn" class="squared">Préc.</button>
@@ -113,7 +124,9 @@
             </div>
             <button id="next-btn" class="squared">Suiv.</button>
         </div>
-        <button onclick="window.location.href = '/products.html';">Voir la gamme complète</button>
+        <div id="gamme">
+            <button onclick="window.location.href = '/products.html';">Voir la gamme complète</button>
+        </div>
     </section>
 </main>
 
