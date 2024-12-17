@@ -43,7 +43,7 @@ header {
     }
     a {
         text-align: center;
-        text-decoration: underline var(--green3);
+        text-decoration: none;
         margin: 0 10px;
         padding: 5px;
         color: var(--light);
@@ -52,9 +52,7 @@ header {
     }
     a.selected {
         color: var(--green2);
-    }
-    a.selected, a:hover {
-        text-decoration-color: var(--light);
+        cursor: default;
     }
     a:hover:not(.selected) {
         color: var(--green1);
@@ -101,11 +99,10 @@ footer {
 section {
     margin: 50px;
     padding: 50px;
-    min-height: calc(100vh - 280px);
     background-color: var(--gray);
 }
-section.no-min {
-    min-height: 0;
+section.full {
+    min-height: calc(100vh - 280px);
 }
 section.flex {
     display: flex;
