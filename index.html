@@ -43,14 +43,15 @@
         }
         #desc{
             background-color: var(--green2);
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                padding: 10px;
+            }
         }
         #products {
             background-color: var(--light);
-        }
-        #gamme {
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
     </style>
 </head>
@@ -92,39 +93,45 @@
         </div>
     </section>
 
-    <section id="desc">
-        <h2>Une entreprise proche de vous</h2>
+    <section id="desc" class="no-min">
+        <div>
+            <h2>Une entreprise proche de vous</h2>
+        </div>
+        <div>
         <p>
-            Anjou Pack'Eco à également pour but que les entreprises qui nous contactant puissent se faire accompagnées sur leurs
-            commandes.<br>
+            Anjou Pack'Eco à également comme but d'apporter une aide aux entreprises nous contactant afin qu'elle puissent
+            se faire accompagnées lors de leurs commandes.<br>
             Il faut savoir que les achats fait via notre entreprise se font par bons de commande, cela nous
             permet d'être au plus proche des clients et ainsi d'être sur qu'ils soient bien accompagnés lors de leur commande.
         </p>
         <p>
-            Pour assurer un accompagnement qualitatif nous mettons un point d'honneur à répondre à toutes vos questions
-            du mieux que nous le pouvons grâce notre expérimentation dans le millieu de l'écologie.
+            Pour assurer un accompagnement qualitatif nous mettons un point d'honneur à répondre vos questions
+            du mieux que nous le pouvons grâce notre expérience professionnelle dans le cadre écologique et du monde de l'emballage .
         </p>
         <p>
             L'équipe d'Anjou Pack'Eco est donc prête à vous conseiller grâce à ses employés qualifiés et dévoués à l'environnement.
         </p>
-        <button onclick="window.location.href = '/contact.html';">Nous contacter</button>
+        </div>
+        <div class="boutton_center">
+            <button onclick="window.location.href = '/contact.html';">Nous contacter pour mieux vous aider</button>
+        </div>
     </section>
 
-    <section id="products" class="no_min">
+    <section id="products" >
         <h2>Nos produits</h2>
         <div class="carousel">
             <button id="prev-btn" class="squared">Préc.</button>
             <div class="item-list">
                 <img class="carousel-item" alt="el0" src="/images/carton_img_1.png" onclick="window.open('/products.html#prod11')"/>
                 <img class="carousel-item" alt="el1" src="/images/sac_papier_1.png" onclick="window.open('/products.html#prod21')"/>
-                <img class="carousel-item" alt="el2" src="/images/sachet_kraft_1.png"/>
-                <img class="carousel-item" alt="el3" src="/images/papier_kraft.png"/>
-                <img class="carousel-item" alt="el4" src="/images/ruban_adhesif_1.png" onclick="scrollToSection('welcome')"/>
-                <img class="carousel-item" alt="el5" src="/images/papier_de_soie_1.png"/>
+                <img class="carousel-item" alt="el2" src="/images/sachet_kraft_1.png" onclick="window.open('/products.html#prod31')"/>
+                <img class="carousel-item" alt="el3" src="/images/papier_kraft.png" onclick="window.open('/products.html#prod41')"/>
+                <img class="carousel-item" alt="el4" src="/images/ruban_adhesif_1.png" onclick="window.open('/products.html#prod51')"/>
+                <img class="carousel-item" alt="el5" src="/images/papier_de_soie_1.png" onclick="window.open('/products.html#prod61')"/>
             </div>
-            <button id="next-btn" class="squared">Suiv.</button>
+                <button id="next-btn" class="squared">Suiv.</button>
         </div>
-        <div id="gamme">
+        <div class="boutton_center">
             <button onclick="window.location.href = '/products.html';">Voir la gamme complète</button>
         </div>
     </section>

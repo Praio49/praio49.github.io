@@ -208,6 +208,11 @@ button:not(.squared):hover, a.btn-like:hover {
     padding: 10px 30px;
     font-weight: bold;
 }
+.boutton_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .organigramme {
     margin: 15px;
     max-width: 100%;
