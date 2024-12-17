@@ -9,24 +9,40 @@
 
     <style>
         section {
-            background-color: var(--green2);
+            background-color: var(--brown2);
             min-height: 0;
-            article{
+            * {
+                margin: 10px;
+            }
+            h2 {
+                color: var(--dark)
+            }
+            article {
                 display: flex;
                 justify-content: space-evenly;
+                align-items: center;
             }
             img {
-                margin: 10px;
-                height: 10em;
+                height: 200px;
             }
             ul {
-                margin-left: 20px;
                 li {
+                    color: var(--light);
                     font-size: 1.4rem;
                     padding-top: 20px;
                     padding-bottom: 20px;
                 }
             }
+        }
+        section:last-child {
+            background-color: var(--light);
+        }
+        #buy {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            margin-bottom: 50px;
         }
     </style>
 </head>
@@ -43,7 +59,7 @@
 </header>
 
 <main>
-    <section id="prod11">
+    <section id="prod11" class="flex">
     <h2>Cartons</h2>
         <article>
             <div>
@@ -90,7 +106,7 @@
         </table>
     </section>
 
-    <section id="prod21">
+    <section id="prod21" class="flex">
         <h2>Sac en papier</h2>
         <article>
             <div>
@@ -126,7 +142,7 @@
         </table>
     </section>
 
-    <section id="prod31">
+    <section id="prod31" class="flex">
         <h2>Sachet papier kraft</h2>
         <article>
             <div>
@@ -179,8 +195,8 @@
         </table>
     </section>
 
-    <h2> Rouleau papier kraft nid d'abeille </h2>
-    <section>
+    <section id="prod41" class="flex">
+        <h2>Rouleau papier kraft nid d'abeille</h2>
         <article>
             <div>
                 <img src="/images/papier_kraft.png" alt="Carton_fermé">
@@ -242,8 +258,8 @@
         </table>
     </section>
 
-    <h2> Ruban adhésif en papier kraft</h2>
-    <section>
+    <section id="prod51" class="flex">
+        <h2>Ruban adhésif en papier kraft</h2>
         <article>
             <div>
                 <img src="/images/ruban_adhesif_1.png" alt="ruban_adhésif">
@@ -280,8 +296,8 @@
         </table>
     </section>
 
-    <h2> Papier de soie </h2>
-    <section class="sec_products">
+    <section id="prod61" class="flex">
+        <h2> Papier de soie </h2>
         <article>
             <div>
                 <img src="/images/papier_de_soie_1.png" alt="ruban_adhésif">
@@ -311,10 +327,13 @@
             </tr>
         </table>
     </section>
-    <h3> Nos produits sont livrables sous 72h </h3>
-    <div class="button_products">
-        <button onclick="window.location.href = '/contact.html';" > Passer à la commande </button>
-    </div>
+
+    <section>
+        <h3> Nos produits sont livrables sous 72h </h3>
+        <div id="buy">
+            <button onclick="window.location.href = '/contact.html';" > Passer à la commande </button>
+        </div>
+    </section>
 </main>
 
 <footer>
