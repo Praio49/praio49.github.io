@@ -104,6 +104,9 @@ section {
     min-height: calc(100vh - 280px);
     background-color: var(--gray);
 }
+section.no-min {
+    min-height: 0;
+}
 section.flex {
     display: flex;
     justify-content: center;

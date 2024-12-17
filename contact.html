@@ -34,7 +34,7 @@
 
 <body>
 <main>
-    <section id="order">
+    <section id="order" class="no-min">
         <h1>Bon de commande</h1>
         <form id="form">
             <fieldset form="form" id="basic-info">
@@ -300,7 +300,7 @@
             </fieldset>
         </form>
 
-        <div>
+        <div id="contact">
             <h3>Pour nous contacter</h3>
             <ul>
                 <li><a href="mailto:anjoupackeco@gmail.com" class="no-deco">anjoupackeco@gmail.com</a></li>
@@ -339,8 +339,10 @@
     const deliveryPrev = document.getElementById('delivery-prev');
 
     startNext.addEventListener('click', () => {
-        basicInfo.style.display = 'none';
-        products.style.display = 'block';
+        if (form.reportValidity()) {
+            basicInfo.style.display = 'none';
+            products.style.display = 'block';
+        }
         scrollToSection('order');
     });
     productsPrev.addEventListener('click', () => {
@@ -349,8 +351,10 @@
         scrollToSection('order');
     });
     productsNext.addEventListener('click', () => {
-        products.style.display = 'none';
-        delivery.style.display = 'block';
+        if (form.reportValidity()) {
+            products.style.display = 'none';
+            delivery.style.display = 'block';
+        }
         scrollToSection('order');
     });
     deliveryPrev.addEventListener('click', () => {
