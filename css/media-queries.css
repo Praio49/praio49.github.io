@@ -28,7 +28,6 @@
     }
     section {
         margin: 0;
-        min-height: calc(100vh - 215px);
         article {
             flex-direction: row;
         }
@@ -41,7 +40,15 @@
             text-align: justify;
         }
     }
-    section#order ul {
+    section#order fieldset#basic-info div {
+        display: flex;
+        flex-direction: column;
+        label {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    ul#contact {
         flex-direction: column;
         li {
             margin: 10px 0;

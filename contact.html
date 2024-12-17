@@ -11,12 +11,17 @@
     <style>
         #order {
             background-color: var(--green2);
-            ul {
-                display: flex;
-                justify-content: space-around;
-                padding-top: 20px;
-                margin-top: 25px;
-                border-top: 1px solid var(--dark);
+        }
+        #contact {
+            display: flex;
+            padding-top: 20px;
+            margin-top: 25px;
+            border-top: 1px solid var(--dark);
+            li {
+                display: block;
+                flex: 1 1 0;
+                margin: 10px 10px 0 10px;
+                text-align: center;
             }
         }
     </style>
@@ -34,29 +39,38 @@
 
 <body>
 <main>
-    <section id="order">
+    <section>
         <h1>Bon de commande</h1>
+        <ul id="contact">
+            <li><a href="mailto:anjoupackeco@gmail.com" class="no-deco">anjoupackeco@gmail.com</a></li>
+            <li>02 41 56 76 74</li>
+            <li>4 Boulevard de Lavoisier, 49000 Angers</li>
+        </ul>
+    </section>
+
+    <section id="order" class="flex">
         <form id="form">
             <fieldset form="form" id="basic-info">
+                <h2>Informations sur l'entreprise</h2>
                 <div>
-                    <label for="company">Nom Entreprise</label>
+                    <label for="company">Nom de l'entreprise</label>
                     <input type="text" id="company" name="company" required minlength="2" maxlength="50" size="30" />
                 </div>
                 <div>
-                    <label for="director">Nom Dirigeant</label>
+                    <label for="director">Nom du dirigeant</label>
                     <input type="text" id="director" name="director" required minlength="2" maxlength="50" size="30" />
                 </div>
                 <div>
-                    <label for="field">Domaine </label>
+                    <label for="field">Domaine d'activité</label>
                     <input type="text" id="field" name="field" required minlength="2" size="30" />
                     <!-- A dropdown with an "other" option would be better-suited, right ? --> <!-- Or maybe not, idk :shrug: -->
                 </div>
                 <div>
-                    <label for="email">Mail</label>
+                    <label for="email">Adresse mail</label>
                     <input type="email" id="email" name="email" size="30" required />
                 </div>
                 <div>
-                    <label for="phone">Tel</label>
+                    <label for="phone">Téléphone</label>
                     <input type="tel" id="phone" name="phone" size="30" required />
                 </div>
                 <div class="controls">
@@ -65,6 +79,7 @@
             </fieldset>
 
             <fieldset form="form" id="products" style="display: none">
+                <h2>Sélections des produits</h2>
                 <table>
                     <tr>
                         <th>Réf.</th>
@@ -290,24 +305,26 @@
                 </div>
             </fieldset>
 
-            <fieldset form="form" id="delivery" style="display: none">
-                <h3>Résumé de la commande</h3>
-                <p>*Code goes here*</p>
+            <fieldset form="form" id="confirmation" style="display: none">
+                <h2>Plus qu'une étape...</h2>
+                <p>Cliquez sur "Valider" pour confirmer et envoyer votre commande.</p>
+                <p>
+                    Suite à cela, nous vous recontacterons sous peu par mail à l'adresse renseignée afin de confirmer
+                    les détails et s'arranger du paiement.
+                </p>
+                <p>Merci !</p>
                 <div class="controls">
                     <a class="btn-like" id="delivery-prev">< Précédent</a>
                     <button type="submit" form="form" value="Submit">Valider</button>
                 </div>
             </fieldset>
-        </form>
 
-        <div id="contact">
-            <h3>Pour nous contacter</h3>
-            <ul>
-                <li><a href="mailto:anjoupackeco@gmail.com" class="no-deco">anjoupackeco@gmail.com</a></li>
-                <li>02 41 56 76 74</li>
-                <li>4 Boulevard de Lavoisier, 49000 Angers</li>
-            </ul>
-        </div>
+            <fieldset form="form" style="display: none">
+                <div class="controls">
+                    <a class="btn-like" href="/index.html">Retour à l'accueil</a>
+                </div>
+            </fieldset>
+        </form>
     </section>
 </main>
 
@@ -332,11 +349,13 @@
     const form = document.getElementById('form');
     const basicInfo = document.getElementById('basic-info');
     const products = document.getElementById('products');
-    const delivery = document.getElementById('delivery');
+    const confirmation = document.getElementById('confirmation');
+
     const startNext = document.getElementById('start-next');
     const productsNext = document.getElementById('products-next');
     const productsPrev = document.getElementById('products-prev');
-    const deliveryPrev = document.getElementById('delivery-prev');
+    const confirmationPrev = document.getElementById('delivery-prev');
+
 
     startNext.addEventListener('click', () => {
         if (form.reportValidity()) {
@@ -353,19 +372,18 @@
     productsNext.addEventListener('click', () => {
         if (form.reportValidity()) {
             products.style.display = 'none';
-            delivery.style.display = 'block';
+            confirmation.style.display = 'block';
         }
         scrollToSection('order');
     });
-    deliveryPrev.addEventListener('click', () => {
+    confirmationPrev.addEventListener('click', () => {
         products.style.display = 'block';
-        delivery.style.display = 'none';
+        confirmation.style.display = 'none';
         scrollToSection('order');
     });
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        products.style.display = 'none';
-        delivery.style.display = 'block';
+    form.addEventListener('submit', () => {
+        confirmation.style.display = 'none';
+        basicInfo.style.display = 'block';
     });
 </script>
 </body>
