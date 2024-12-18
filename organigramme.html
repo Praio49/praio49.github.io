@@ -6,6 +6,13 @@
     <link href="/images/carton1.png" rel="icon">
     <link href="/css/style.css" rel="stylesheet" >
     <link href="/css/media-queries.css" rel="stylesheet">
+    <style>
+        #organigramme {
+            margin: 50px;
+            max-width: 100%;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <header>
     <img src="/images/logo3.png" alt="Logo" class="logo">
@@ -19,21 +26,21 @@
 
 <body>
 <main> <!--  le main ne contient que l'organigramme et il n'est pas retouché de sa version de base -->
-    <section>
+    <section class="full">
         <h1>Le visage de Anjou Pack'Eco</h1>
         <div class="div_orga">
-            <img src="/images/organigramme_1.png" alt="Organigramme de l'entreprise" id="organigramme">
+            <img src="/images/organigramme_1.png" alt="Organigramme de l'entreprise" id="organigramme" onclick="window.open('/images/organigramme_1.png', '_blank')">
         </div>
-        <p>
+        <h3>
             Pour encore plus d'informations sur ce que nous faisons et qui nous sommes,
             vous pouvez cliquer sur les liens menant à nos réseaux ci-dessous.
-        </p>
+        </h3>
     </section>
 </main>
 
 <footer>
     <div>
-        <ul>
+        <ul style="display: none;">
             <li><a href="">Lien réseau 1</a></li>
             <li><a href="">Lien réseau 2</a></li>
         </ul>

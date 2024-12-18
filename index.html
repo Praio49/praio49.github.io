@@ -26,13 +26,13 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: end;
-                backdrop-filter: brightness(65%);
+                backdrop-filter: brightness(55%);
                 padding: 50px 35% 50px 50px;
                 min-height: inherit;
             }
             p {
                 color: var(--light);
-            };
+            }
             p:first-child {
                 font: 1.5em Belleza;
                 font-weight: bold;
@@ -41,13 +41,17 @@
                 margin: 30px;
             }
         }
-        #desc{
+        #desc {
             background-color: var(--green2);
             div {
                 display: flex;
                 flex-direction: column;
                 justify-content: end;
-                padding: 10px;
+                margin: 30px;
+            }
+            p {
+                text-align: justify;
+                max-width: 1000px;
             }
         }
         #products {
@@ -68,7 +72,7 @@
 </header>
 
 <main>
-    <section id="welcome" class="flex">
+    <section id="welcome" class="flex full">
         <div>
             <p>Anjou Pack'Eco</p>
             <h1>Emballez avec fierté</h1>
@@ -83,55 +87,52 @@
                 entreprise 100 % Angevine, nous permettant ainsi de participer à l'économie locale grâce à un réseau
                 basé uniquement en Anjou.
             </p>
-            <p>
-                Anjou Pack'Eco est aussi une entreprise qui met un point d'honneur à développer sa RSE au maximum via des
-                consommation en énergie très faibles ainsi qu'une mobilisation pour des projets solidaires tel que un soutient
-                pour les petites organisations locales. Nous pouvons également nous vanter d'être une entreprise
-                ou les chances sont égales pour tous.
-            </p>
 <!--        <button onclick="scrollToSection('products')">Nos produits</button>-->
         </div>
     </section>
 
-    <section id="desc" class="no-min">
+    <section id="desc" class="flex">
+        <h2>Une entreprise proche de vous</h2>
         <div>
-            <h2>Une entreprise proche de vous</h2>
+            <p>
+                Anjou Pack'Eco est une entreprise qui met un point d'honneur à développer sa RSE au maximum via une
+                consommation en énergie particulièrement et un soutien sans faille aux petites organisations locales
+                ainsi qu'à différents projets solidaires. Nous pouvons également nous vanter d'être une entreprise
+                permettant une réelle égalité des chances pour toutes et tous.
+            </p>
+            <p>
+                Anjou Pack'Eco a également pour but d'apporter une aide aux entreprises nous contactant afin qu'elles
+                puissent se faire accompagner lors de leurs commandes.
+                Il faut savoir que notre entreprise gère les achats à l'aide de bons de commande, ce qui nous permet
+                d'être au plus proche des clients et ainsi s'assurer qu'ils sont bien accompagnés lors de leur commande.
+            </p>
+            <p>
+                Pour assurer un accompagnement qualitatif, nous nous engageons à répondre à vos questions du mieux que
+                nous le pouvons grâce notre expérience professionnelle dans le monde de l'écologique et de l'emballage.
+            </p>
+            <p>
+                L'équipe d'Anjou Pack'Eco est prête à vous aider grâce à ses employés qualifiés et dévoués à
+                l'environnement.
+            </p>
         </div>
-        <div>
-        <p>
-            Anjou Pack'Eco à également comme but d'apporter une aide aux entreprises nous contactant afin qu'elle puissent
-            se faire accompagnées lors de leurs commandes.<br>
-            Il faut savoir que les achats fait via notre entreprise se font par bons de commande, cela nous
-            permet d'être au plus proche des clients et ainsi d'être sur qu'ils soient bien accompagnés lors de leur commande.
-        </p>
-        <p>
-            Pour assurer un accompagnement qualitatif nous mettons un point d'honneur à répondre vos questions
-            du mieux que nous le pouvons grâce notre expérience professionnelle dans le cadre écologique et du monde de l'emballage .
-        </p>
-        <p>
-            L'équipe d'Anjou Pack'Eco est donc prête à vous conseiller grâce à ses employés qualifiés et dévoués à l'environnement.
-        </p>
-        </div>
-        <div class="boutton_center">
-            <button onclick="window.location.href = '/contact.html';">Nous contacter pour mieux vous aider</button>
-        </div>
+        <button onclick="window.location.href = '/contact.html';">Nous contacter pour mieux vous aider</button>
     </section>
 
-    <section id="products" >
+    <section id="products">
         <h2>Nos produits</h2>
         <div class="carousel">
             <button id="prev-btn" class="squared">Préc.</button>
             <div class="item-list">
-                <img class="carousel-item" alt="el0" src="/images/carton_img_1.png" onclick="window.open('/products.html#prod11')"/>
-                <img class="carousel-item" alt="el1" src="/images/sac_papier_1.png" onclick="window.open('/products.html#prod21')"/>
-                <img class="carousel-item" alt="el2" src="/images/sachet_kraft_1.png" onclick="window.open('/products.html#prod31')"/>
-                <img class="carousel-item" alt="el3" src="/images/papier_kraft.png" onclick="window.open('/products.html#prod41')"/>
-                <img class="carousel-item" alt="el4" src="/images/ruban_adhesif_1.png" onclick="window.open('/products.html#prod51')"/>
-                <img class="carousel-item" alt="el5" src="/images/papier_de_soie_1.png" onclick="window.open('/products.html#prod61')"/>
+                <img class="carousel-item" alt="el0" src="/images/carton_img_1.png" onclick="window.open('/products.html#prod11', '_self')"/>
+                <img class="carousel-item" alt="el1" src="/images/sac_papier_1.png" onclick="window.open('/products.html#prod21', '_self')"/>
+                <img class="carousel-item" alt="el2" src="/images/sachet_kraft_1.png" onclick="window.open('/products.html#prod31', '_self')"/>
+                <img class="carousel-item" alt="el3" src="/images/papier_kraft.png" onclick="window.open('/products.html#prod41', '_self')"/>
+                <img class="carousel-item" alt="el4" src="/images/ruban_adhesif_1.png" onclick="window.open('/products.html#prod51', '_self')"/>
+                <img class="carousel-item" alt="el5" src="/images/papier_de_soie_1.png" onclick="window.open('/products.html#prod61', '_self')"/>
             </div>
-                <button id="next-btn" class="squared">Suiv.</button>
+            <button id="next-btn" class="squared">Suiv.</button>
         </div>
-        <div class="boutton_center">
+        <div class="flex-center">
             <button onclick="window.location.href = '/products.html';">Voir la gamme complète</button>
         </div>
     </section>
@@ -139,7 +140,7 @@
 
 <footer>
     <div>
-        <ul>
+        <ul style="display: none">
             <li><a href="">Lien réseau 1</a></li>
             <li><a href="">Lien réseau 2</a></li>
         </ul>

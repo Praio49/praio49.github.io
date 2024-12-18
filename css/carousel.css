@@ -20,8 +20,9 @@
         scroll-snap-align: center;
         padding: 10px;
         margin: 0 20px;
-        height: 40vh;
+        width: 16vw;
         max-width: 300px;
+        aspect-ratio: 1;
     }
     .carousel-item[onclick] {
         cursor: pointer;
